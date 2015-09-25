@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B17c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4am-gD-vLB">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--微信-->
+        <scene sceneID="cNP-se-Rue">
+            <objects>
+                <viewController title="微信" id="4am-gD-vLB" customClass="ChatViewController" customModule="WeChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pN0-6X-OAx"/>
+                        <viewControllerLayoutGuide type="bottom" id="QGg-SP-dSS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fzR-Q3-zu4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="xqB-bd-jxu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4am-gD-vLB" id="ioj-yF-Vks"/>
+                                    <outlet property="delegate" destination="4am-gD-vLB" id="yOM-RM-f0f"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QGg-SP-dSS" firstAttribute="top" secondItem="xqB-bd-jxu" secondAttribute="bottom" id="2fL-rK-SNB"/>
+                            <constraint firstAttribute="trailing" secondItem="xqB-bd-jxu" secondAttribute="trailing" id="QyQ-uC-DEq"/>
+                            <constraint firstItem="xqB-bd-jxu" firstAttribute="leading" secondItem="fzR-Q3-zu4" secondAttribute="leading" id="kox-62-zbb"/>
+                            <constraint firstItem="xqB-bd-jxu" firstAttribute="top" secondItem="fzR-Q3-zu4" secondAttribute="top" id="p1f-Xh-dVB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chatTableView" destination="xqB-bd-jxu" id="hzA-eP-n8i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FH0-Yi-lCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="225" y="202"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B17c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Qo-y8-F2n">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Main Leadpage View Controller-->
+        <scene sceneID="NjT-3J-M0k">
+            <objects>
+                <viewController id="4Qo-y8-F2n" customClass="MainLeadpageViewController" customModule="WeChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vzB-iR-uZQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="F85-pH-ibE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8p3-O0-9AX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fourpage-375w-667h.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="P5M-p9-f2j">
+                                <rect key="frame" x="113" y="0.0" width="375" height="600"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17R-8M-wvk">
+                                <rect key="frame" x="165" y="475" width="270" height="66"/>
+                                <animations/>
+                                <state key="normal" title="开始微信" backgroundImage="into_home">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showMainTabbar:" destination="4Qo-y8-F2n" eventType="touchUpInside" id="CMx-rN-9Gt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P5M-p9-f2j" firstAttribute="top" secondItem="8p3-O0-9AX" secondAttribute="top" id="6mD-NT-Krz"/>
+                            <constraint firstItem="F85-pH-ibE" firstAttribute="top" secondItem="17R-8M-wvk" secondAttribute="bottom" constant="59" id="OQb-KO-tYO"/>
+                            <constraint firstItem="17R-8M-wvk" firstAttribute="centerX" secondItem="P5M-p9-f2j" secondAttribute="centerX" id="STR-UY-JtK"/>
+                            <constraint firstItem="P5M-p9-f2j" firstAttribute="centerX" secondItem="8p3-O0-9AX" secondAttribute="centerX" id="ZYA-zN-I4w"/>
+                            <constraint firstAttribute="bottom" secondItem="P5M-p9-f2j" secondAttribute="bottom" id="wJN-fB-7pg"/>
+                            <constraint firstItem="P5M-p9-f2j" firstAttribute="centerY" secondItem="8p3-O0-9AX" secondAttribute="centerY" id="xjD-5W-Cj8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="57a-wI-HDG"/>
+                    <connections>
+                        <outlet property="startBtn" destination="17R-8M-wvk" id="25t-Lj-puJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bvV-1R-55K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="167" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="fourpage-375w-667h.jpg" width="375" height="667"/>
+        <image name="into_home" width="270" height="66"/>
+    </resources>
+</document>
